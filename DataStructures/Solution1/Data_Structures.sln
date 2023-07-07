@@ -7,13 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Ders", "01_Ders", "{8AC8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MyDataStructures", "MyDataStructures", "{2E1D7594-75DF-407A-A019-CF3F372A4376}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koleksiyonlar_Diziler_Giris", "Koleksiyonlar_Diziler\Koleksiyonlar_Diziler_Giris.csproj", "{CFAA84BB-7E4B-4F98-A866-6A4C4ADA0467}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Koleksiyonlar_Diziler_Giris", "Koleksiyonlar_Diziler\Koleksiyonlar_Diziler_Giris.csproj", "{CFAA84BB-7E4B-4F98-A866-6A4C4ADA0467}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDataStructures", "MyDataStructures\MyDataStructures.csproj", "{D8CC3FF2-34B0-4829-BBA2-268C1311BE81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDataStructures", "MyDataStructures\MyDataStructures.csproj", "{D8CC3FF2-34B0-4829-BBA2-268C1311BE81}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02_Ders", "02_Ders", "{A9E4729A-95A1-4F31-BABE-BE04FDFEA852}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koleksiyonlar", "Koleksiyonlar\Koleksiyonlar.csproj", "{FE23F02D-31AB-439F-8969-063C490C2042}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Koleksiyonlar", "Koleksiyonlar\Koleksiyonlar.csproj", "{FE23F02D-31AB-439F-8969-063C490C2042}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
