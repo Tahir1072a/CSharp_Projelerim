@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Koleksiyonlar/1.0.0": {
+        "dependencies": {
+          "MyDataStructures": "1.0.0"
+        },
+        "runtime": {
+          "Koleksiyonlar.dll": {}
+        }
+      },
+      "MyDataStructures/1.0.0": {
+        "runtime": {
+          "MyDataStructures.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Koleksiyonlar/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MyDataStructures/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
