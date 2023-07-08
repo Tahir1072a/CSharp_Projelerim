@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 
 namespace MyDataStructures.MyArrayList
@@ -36,8 +37,18 @@ namespace MyDataStructures.MyArrayList
         }
         public T this[int index]
         {
-            get => InnerList[index];
-            set => InnerList[index] = value;
+            get
+            {
+                if(index <= Count)
+                {
+                    return InnerList[index];
+                }
+                else
+                {
+                    throw new IndexOutOfRangeException();
+                    //Hata kodu yazıalbilir.
+                }
+            }
         }
         public void Add(T item)
         {
@@ -67,15 +78,34 @@ namespace MyDataStructures.MyArrayList
                 Console.WriteLine("The list alredy empty!"); 
                 return false;
             }
-
-            InnerList = item != null ? InnerList.Take(Count).Where(x => !(item.Equals(x))).ToArray() : InnerList;
+            if (item == null)
+                return false;
+            #region LINQ Yaklaşimi
+            InnerList = InnerList.Take(Count).Where(x => !(item.Equals(x))).ToArray();
             Count = InnerList.Length;
-            
             return true;
+            #endregion
         }
-        public void RemoveAt(int index)
+        public bool RemoveAt(int index)
         {
-            //Buradaki algoritmayı kendin yazmayı dene!
+            if (index > Count || index < 0)
+                return false; //Hata kodları eklenebilir.
+            if (Capacity / 4 == Count)
+                HalfList();
+            if (!(Count > 0))
+            {
+                Console.WriteLine("The list alredy empty!");
+                return false;
+            }
+
+            T[] temp = InnerList;
+
+            for (int i = index; i < Count - 1; i++)
+            {
+                InnerList[i] = temp[i + 1];
+            }   
+            Count--;
+            return true;
         }
         private void HalfList()
         {
