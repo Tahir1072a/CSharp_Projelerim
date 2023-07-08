@@ -35,10 +35,7 @@ temp.RemoveAt(1);
 temp.RemoveAt(1);
 temp.RemoveAt(1);
 temp.RemoveAt(1);
-foreach (int i in temp)
-{
-    Console.WriteLine(i);
-}
+
 Console.WriteLine($"{temp.Count} / {temp.Capacity}");
 /* indexer kullanarak diziyi bu şekilde de dönebiliriz.
 for (int i = 0; i < values.Count; i++)
