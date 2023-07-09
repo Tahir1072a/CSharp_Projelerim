@@ -15,16 +15,5 @@ myLinkedList.AddLast(982);
 myLinkedList.AddAfter(myLinkedList.Head.Next, 100);
 myLinkedList.AddBefore(myLinkedList.Head, 58);
 myLinkedList.AddAfter(myLinkedList.Head.Next.Next, a);
-String assssssssssssss = "ff";
-Console.WriteLine(assssssssssssss);
-
-foreach (var i in myLinkedList3)
-{
-    if(myLinkedList2 == i)
-    {
-
-    }
-}
-
 
 Console.ReadLine();
