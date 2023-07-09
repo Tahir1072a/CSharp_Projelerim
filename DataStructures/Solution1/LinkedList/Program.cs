@@ -1,7 +1,7 @@
 ﻿using MyDataStructures.LinkedList.MySinglyLinkedList;
 SinglyLinkedListNode<int> a = new(1111);
 
-int[] arr = new int[] { 20,30,52,26,25,212,74};
+int[] arr = new int[] { 20};
 
 SinglyLinkedList<int> myLinkedList = new SinglyLinkedList<int>(arr);
 SinglyLinkedList<int> myLinkedList2 = new SinglyLinkedList<int>(arr);
@@ -15,5 +15,12 @@ myLinkedList.AddLast(982);
 myLinkedList.AddAfter(myLinkedList.Head.Next, 100);
 myLinkedList.AddBefore(myLinkedList.Head, 58);
 myLinkedList.AddAfter(myLinkedList.Head.Next.Next, a);
+
+Console.WriteLine($"{myLinkedList.RemoveLast()} has been removed");
+Console.WriteLine($"{myLinkedList.RemoveLast()} has been removed");
+Console.WriteLine($"{myLinkedList.RemoveLast()} has been removed");
+
+myLinkedList.Remove(58);
+myLinkedList.Remove(120);
 
 Console.ReadLine();

@@ -47,4 +47,5 @@ list.CopyTo(intarr, 0); //=> belirtilen arraya belirtilen indexten başlayarak, 
 list.GetEnumerator(); // => bize ilgili listenin elemanlarını bir itera edilebilir liste olarak döner. BUrada kendi enumaretor sınıfımızı yazmamız gerekiyor. Bu konu araştırılarak yapıalcak.
 list.GetHashCode();
 list.OnDeserialization(null); // incelneecek.
+list.Clear();
 //removlarda yazılacak bu kadar.

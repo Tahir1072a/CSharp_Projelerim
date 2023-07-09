@@ -90,9 +90,22 @@ namespace MyDataStructures.LinkedList.MySinglyLinkedList
             newNode.Next = node;
             if (Head.Equals(node)) Head = newNode;
         }
-        public bool Contains(T item)
+        private (SinglyLinkedListNode<T> prev,SinglyLinkedListNode<T> deletedNode) Contains(T item)
         {
-            throw new NotImplementedException();
+            if (Head == null) throw new NullReferenceException("The list is empty!");
+            if (item == null) throw new NullReferenceException("The referance value is empty!");
+            var ptr = Head;
+            SinglyLinkedListNode<T> prev = null;
+            while (ptr != null)
+            {
+                if (item.Equals(ptr.Item))
+                {
+                    return (prev,ptr);
+                }
+                prev = ptr;
+                ptr = ptr.Next;
+            }
+            return (prev,ptr);
         }
         public bool Contains(SinglyLinkedListNode<T> node)
         {
@@ -104,7 +117,43 @@ namespace MyDataStructures.LinkedList.MySinglyLinkedList
             }
             return false;
         }
-
+        public T RemoveFirst()
+        {
+            var item = Head.Item;
+            Head = Head.Next;
+            return item;
+        }
+        public T RemoveLast()
+        {
+            var ptr = Head;
+            while(ptr.Next.Next != null)
+            {
+                ptr = ptr.Next;
+            }
+            var value = ptr.Next.Item;
+            ptr.Next = null;
+            return value;
+        }
+        public void Remove(T item)
+        {
+            if (Head == null) throw new ArgumentException("The list is empty!");
+            (var prevNode,var deletedNode)  = Contains(item);
+            if(prevNode == null && deletedNode == Head)
+            {
+                Head = deletedNode.Next;
+                deletedNode = null;
+            }
+            else if(deletedNode == null)
+            {
+                throw new ArgumentException("The value could not be found in the list!");
+            }
+            else
+            {
+                prevNode.Next = deletedNode.Next;
+                deletedNode.Next = null;
+                deletedNode = null;
+            }
+        }
         public IEnumerator<T> GetEnumerator()
         {
             return new SinglyLinkedListEnumerator<T>(Head);
