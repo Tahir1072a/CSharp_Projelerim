@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "LinkedList_İnceleme/1.0.0": {
+        "runtime": {
+          "LinkedList_İnceleme.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LinkedList_İnceleme/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

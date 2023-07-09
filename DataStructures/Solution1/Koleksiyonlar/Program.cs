@@ -12,30 +12,15 @@ values.Add(2);
 
 MyList<int> temp = (MyList<int>)values.Clone();
 //temp[0] = 129;  // => clone metodunun tamamen deep copy üzerinde çalıştığını gösterir.
-temp.Add(129);
-temp.Add(120);
-temp.Add(120);
-temp.Add(120);
-temp.Add(120);
-temp.Add(120);
-temp.Add(120);
-temp.RemoveAll(129);
-temp.Add(120);
-temp.Add(120);
-temp.Add(120);
-temp.Add(12);
-temp.Add(12);
-temp.RemoveAt(1);
-temp.RemoveAt(1);
-temp.RemoveAt(1);
-temp.RemoveAt(1);
-temp.RemoveAt(1);
-temp.RemoveAt(1);
-temp.RemoveAt(1);
-temp.RemoveAt(1);
-temp.RemoveAt(1);
-temp.RemoveAt(1);
 
+
+
+var a = temp.GetEnumerator(); //=> kendi foreach döngümüzü yaptık
+for (int i = 0; i < temp.Count; i++)
+{
+    a.MoveNext();
+    Console.WriteLine(a.Current);
+}
 Console.WriteLine($"{temp.Count} / {temp.Capacity}");
 /* indexer kullanarak diziyi bu şekilde de dönebiliriz.
 for (int i = 0; i < values.Count; i++)

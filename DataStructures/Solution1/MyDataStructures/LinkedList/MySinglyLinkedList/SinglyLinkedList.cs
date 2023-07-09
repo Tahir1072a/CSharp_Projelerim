@@ -11,6 +11,17 @@ namespace MyDataStructures.LinkedList.MySinglyLinkedList
     {
         public SinglyLinkedListNode<T> Head { get; set; }
         private bool isHeadNull => Head == null ? true : false;
+        public SinglyLinkedList()
+        {
+            
+        }
+        public SinglyLinkedList(IEnumerable<T> collection)
+        {
+            foreach (var item in collection)
+            {
+                AddFirst(item);
+            }
+        }
         public void AddFirst(T item)
         {
             SinglyLinkedListNode<T> newNode = new SinglyLinkedListNode<T>(item);
