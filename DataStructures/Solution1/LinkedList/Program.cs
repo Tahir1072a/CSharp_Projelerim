@@ -1,4 +1,5 @@
-﻿using MyDataStructures.LinkedList.MySinglyLinkedList;
+﻿using MyDataStructures.LinkedList.MyDoublyLinkedList;
+using MyDataStructures.LinkedList.MySinglyLinkedList;
 SinglyLinkedListNode<int> a = new(1111);
 
 int[] arr = new int[] { 20};
@@ -22,5 +23,12 @@ Console.WriteLine($"{myLinkedList.RemoveLast()} has been removed");
 
 myLinkedList.Remove(58);
 myLinkedList.Remove(120);
+
+DoubleLinkedList<int> listem = new();
+listem.AddFirst(10);
+listem.AddFirst(20);
+listem.AddFirst(1);
+listem.RemoveFirst();
+listem.RemoveFirst();
 
 Console.ReadLine();
