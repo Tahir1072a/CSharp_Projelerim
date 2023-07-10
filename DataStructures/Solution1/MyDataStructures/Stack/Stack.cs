@@ -37,11 +37,10 @@ namespace MyDataStructures.Stack
         {
             _stack.Push(value);
         }
-
-        public enum StackType
-        {
-            Array = 0, // => List<T>
-            LinkedList = 1, // => SinglyLinkedList
-        }
+    }
+    public enum StackType
+    {
+        Array = 0, // => List<T>
+        LinkedList = 1, // => SinglyLinkedList
     }
 }

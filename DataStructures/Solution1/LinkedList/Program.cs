@@ -1,5 +1,8 @@
 ﻿using MyDataStructures.LinkedList.MyDoublyLinkedList;
 using MyDataStructures.LinkedList.MySinglyLinkedList;
+using MyDataStructures.Queue;
+using MyDataStructures.Stack;
+
 SinglyLinkedListNode<int> a = new(1111);
 
 int[] arr = new int[] { 20};
@@ -30,5 +33,18 @@ listem.AddFirst(20);
 listem.AddFirst(1);
 listem.RemoveFirst();
 listem.RemoveFirst();
+
+MyDataStructures.Queue.Queue<int> queue = new MyDataStructures.Queue.Queue<int>(QueueType.LinkedList);
+queue.EnQueue(1);
+queue.EnQueue(2);
+queue.EnQueue(3);
+queue.EnQueue(4);
+queue.DeQueue();
+MyDataStructures.Stack.Stack<int> stack = new MyDataStructures.Stack.Stack<int>(StackType.LinkedList);
+stack.Push(1);
+stack.Push(2);
+stack.Push(3);
+stack.Push(4);
+stack.Pop();
 
 Console.ReadLine();
