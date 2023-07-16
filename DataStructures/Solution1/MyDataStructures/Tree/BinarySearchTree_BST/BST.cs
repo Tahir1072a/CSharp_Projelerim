@@ -122,7 +122,7 @@ namespace MyDataStructures.Tree
         }
         public IEnumerator<T> GetEnumerator()
         {
-            return new BSTEnumerator<T>(Root)
+            return new BSTEnumerator<T>(Root);
         }
 
         IEnumerator IEnumerable.GetEnumerator()

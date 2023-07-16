@@ -4,26 +4,30 @@ namespace MyDataStructures.Tree
 {
     public class BSTEnumerator<T> : IEnumerator<T> where T : IComparable
     {
-        public T Current { get; private set; }
+        private List<Node<T>> list;
+        private int indexer = -1;
 
-        object IEnumerator.Current => throw new NotImplementedException();
-        public BSTEnumerator(T value)
+        public T Current => list[indexer].Value;
+
+        object IEnumerator.Current => Current;
+        public BSTEnumerator(Node<T> root)
         {
-            Current = value;
+            list = new BinaryTree<T>().InOrderIter(root);
         }
         public void Dispose()
         {
-            throw new NotImplementedException();
+            list = null;
         }
 
         public bool MoveNext()
         {
-            
+            indexer++;
+            return indexer < list.Count;
         }
 
         public void Reset()
         {
-            throw new NotImplementedException();
+            indexer = -1;
         }
     }
 }

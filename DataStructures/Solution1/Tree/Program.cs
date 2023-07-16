@@ -31,6 +31,11 @@ foreach (var item in instance.PostOrderNonRecursiveTraversal(denem.Root))
     Console.WriteLine(item);
 }
 Console.WriteLine("-----------------------------------------");
+foreach(var item in denem)
+{
+    Console.WriteLine(item);
+}
+Console.WriteLine("-----------------------------------------");
 Console.WriteLine(BinaryTree<int>.MaxDepht(denem.Root));
 Console.WriteLine(BinaryTree<int>.DeepstDephtNode(denem.Root));
 Console.WriteLine(BinaryTree<int>.NumberOfLeafs(denem.Root));
