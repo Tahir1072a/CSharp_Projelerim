@@ -20,13 +20,12 @@ denem.Add(3000);
 denem.Add(600);
 denem.Add(170);
 Console.WriteLine(denem.Remove(denem.Root, 6)); 
-BinaryTree<int> instance = new BinaryTree<int>();
-foreach (var item in instance.GetListPostOrder(denem.Root))
+foreach (var item in BinaryTree<int>.GetListPostOrder(denem.Root))
 {
     Console.WriteLine(item);
 }
 Console.WriteLine("-----------------------------------------");
-foreach (var item in instance.PostOrderNonRecursiveTraversal(denem.Root))
+foreach (var item in BinaryTree<int>.PostOrderNonRecursiveTraversal(denem.Root))
 {
     Console.WriteLine(item);
 }
@@ -37,12 +36,12 @@ foreach(var item in denem)
 }
 Console.WriteLine("-----------------------------------------");
 Console.WriteLine(BinaryTree<int>.MaxDepht(denem.Root));
-Console.WriteLine(BinaryTree<int>.DeepstDephtNode(denem.Root));
+Console.WriteLine(BinaryTree<int>.DeepstNode(denem.Root));
 Console.WriteLine(BinaryTree<int>.NumberOfLeafs(denem.Root));
 Console.WriteLine(BinaryTree<int>.NumberOfFullNodes(denem.Root));
 Console.WriteLine(BinaryTree<int>.NumberOfHalfNodes(denem.Root));
 Console.WriteLine("-----------------------------------------");
-instance.PrintPaths(denem.Root);
+BinaryTree<int>.PrintPaths(denem.Root);
 //Console.WriteLine(denem.Find(denem.Root,300));
 
 

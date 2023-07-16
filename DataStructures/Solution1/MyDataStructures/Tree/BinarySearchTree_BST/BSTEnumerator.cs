@@ -12,7 +12,7 @@ namespace MyDataStructures.Tree
         object IEnumerator.Current => Current;
         public BSTEnumerator(Node<T> root)
         {
-            list = new BinaryTree<T>().InOrderIter(root);
+            list = BinaryTree<T>.InOrderIter(root);
         }
         public void Dispose()
         {

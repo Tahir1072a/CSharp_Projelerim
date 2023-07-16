@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace MyDataStructures.Tree
 {
+    /// <summary>
+    /// Sıralı İkili Ağaçlar için kullanılır. Ekleme Yöntemi ile farklılık gösterir. Ekleme yöntemi root'a göre büyük, küçük karşılaştırması yapar. Gelen değer root'dan küçük ise eklemeyi sol, büyük ise sağa yapar.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class BST<T> : IEnumerable<T> where T : IComparable
     {
         public Node<T> Root { get; private set; }
@@ -59,12 +63,22 @@ namespace MyDataStructures.Tree
             }
             ptr = newNode;
         }
+        /// <summary>
+        /// İligli Ağaçtaki en küçük değeri döndürür.
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
         public T FindMin(Node<T> root)
         {
             var current = root;
             while (current.Left != null) { current = current.Left; }
             return current.Value;
         }
+        /// <summary>
+        /// İlgili Ağaçtaki en büyük değeri döndürür.
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
         public T FindMax(Node<T> root)
         {
             var current = root;
