@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyDataStructures.Tree
+namespace MyDataStructures.Tree.BinaryTrees
 {
     /// <summary>
     /// Tüm binary Treeler için genle metotları içerir.
@@ -178,11 +178,11 @@ namespace MyDataStructures.Tree
         /// <returns></returns>
         public static int MaxDepht(Node<T> root)
         {
-            if(root == null) return 0; //Kök null ise derinliği 0'dır.
+            if (root == null) return 0; //Kök null ise derinliği 0'dır.
             int leftDepht = MaxDepht(root.Left); //Önce kökün sol tarafına gider ve orada bir derinlik araması yapar. Dikkat recursive bir çağrıdır.
             int rightDepht = MaxDepht(root.Right); //Kökün sol tarafı için arama bittiğinde sağ tarafına geçer ve orada derinlik bakar.
             //Son olarak kökün sağ ve sol tarfındaki derinliği karşılaştırır. Hangi taraf daha derinse kök kendisinide hesaba katarak +1 yapar ve ilgili değeri return eder.
-            return (leftDepht > rightDepht) ? leftDepht + 1 : rightDepht + 1;
+            return leftDepht > rightDepht ? leftDepht + 1 : rightDepht + 1;
         }
         /// <summary>
         /// Parametre olarak verilen kökün(Ağaç yapısının) en derinindeki değeri bulur. Aynı derinlikteki değerler için en sağdaki değeri return eder.
@@ -207,9 +207,9 @@ namespace MyDataStructures.Tree
             }
             return temp;
         }
-        public static int NumberOfFullNodes(Node<T> root) => BinaryTree<T>.LevelOrderNonRecursiveTraversal(root).Where(x => (x.Left != null && x.Right != null))
+        public static int NumberOfFullNodes(Node<T> root) => BinaryTree<T>.LevelOrderNonRecursiveTraversal(root).Where(x => x.Left != null && x.Right != null)
             .ToList().Count;
-        public static int NumberOfHalfNodes(Node<T> root) => BinaryTree<T>.LevelOrderNonRecursiveTraversal(root).Where(x => (x.Left == null && x.Right != null) || (x.Left != null && x.Right == null))
+        public static int NumberOfHalfNodes(Node<T> root) => BinaryTree<T>.LevelOrderNonRecursiveTraversal(root).Where(x => x.Left == null && x.Right != null || x.Left != null && x.Right == null)
             .ToList().Count;
         /// <summary>
         /// Parametre olarak girilen root için yapraklara ulaşım yolarını consala çizdirir.
@@ -228,13 +228,13 @@ namespace MyDataStructures.Tree
         /// <param name="pathLenght"></param>
         private static void PrintPaths(Node<T> root, T[] path, int pathLenght = 0)
         {
-            if(root == null) return; //Root null ise çizme işlemi yapılamaz.
+            if (root == null) return; //Root null ise çizme işlemi yapılamaz.
             path[pathLenght] = root.Value; //Diziye kök değer eklenir.
             pathLenght++; //Dizi indexer'ı bir artar. Count değerini artırmış oluyoruz.
 
-            if(root.Left == null && root.Right == null) //root'un sağı ve solu null ise yaprağa ulaşmışızdır demektir. O zaman yazdırma işlemi başlar. 
+            if (root.Left == null && root.Right == null) //root'un sağı ve solu null ise yaprağa ulaşmışızdır demektir. O zaman yazdırma işlemi başlar. 
             {
-                PrintArray(path, pathLenght); 
+                PrintArray(path, pathLenght);
             }
             else //Yaprağa ulaşılmadıysa recursive çağrılar devam eder.
             {
@@ -267,19 +267,19 @@ namespace MyDataStructures.Tree
             int count = 0; //Yaprak sayısını saymak için kullanılan değikendir.
             if (root == null) return count; //Parametre olarak gelen kök null ise 0 döner. Hata vermez!. 
             var Q = new Queue<Node<T>>(); //Kuyruk yapısı oluşturulur. Ağaç içinde dolaşmak içindir.
-            Q.Enqueue(root); 
-            while(Q.Count > 0)
+            Q.Enqueue(root);
+            while (Q.Count > 0)
             {
                 var temp = Q.Dequeue(); //Roottan başlanır.
                 if (temp.Left == null && temp.Right == null) //Sağ ve sol null mı kontrol edilir. Null ise bu bir yapraktır.
                     count++;
                 //Değil ise ve sadece sol değeri kontrol edilir. Sol değer null değilse sol değeri kuyruğa ekler. Kuyruğa eklneen her değer için bir dolaşım yapıalcaktır.
-                if(temp.Left != null)
+                if (temp.Left != null)
                 {
                     Q.Enqueue(temp.Left);
                 }
                 //Yukarıdaki aynı işlemi sağ için yapar.
-                if(temp.Right != null)
+                if (temp.Right != null)
                 {
                     Q.Enqueue(temp.Right);
                 }

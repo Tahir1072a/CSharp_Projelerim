@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace MyDataStructures.Tree
+namespace MyDataStructures.Tree.BinaryTrees
 {
     public class BSTEnumerator<T> : IEnumerator<T> where T : IComparable
     {

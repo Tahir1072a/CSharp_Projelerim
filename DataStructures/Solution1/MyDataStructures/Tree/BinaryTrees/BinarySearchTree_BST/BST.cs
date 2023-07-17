@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyDataStructures.Tree
+namespace MyDataStructures.Tree.BinaryTrees
 {
     /// <summary>
     /// Sıralı İkili Ağaçlar için kullanılır. Ekleme Yöntemi ile farklılık gösterir. Ekleme yöntemi root'a göre büyük, küçük karşılaştırması yapar. Gelen değer root'dan küçük ise eklemeyi sol, büyük ise sağa yapar.
@@ -16,7 +16,7 @@ namespace MyDataStructures.Tree
         public Node<T> Root { get; private set; }
         public BST()
         {
-            
+
         }
         public BST(IEnumerable<T> collection)
         {
@@ -39,13 +39,13 @@ namespace MyDataStructures.Tree
             }
             var newNode = new Node<T>(value);
             var ptr = Root;
-            while(true)
+            while (true)
             {
                 var parent = ptr;
-                if(ptr.Value.CompareTo(value) < 0) //İlgili değer, node'da bulunan değerden sonra geliyorsa sağ dala geçilir.
+                if (ptr.Value.CompareTo(value) < 0) //İlgili değer, node'da bulunan değerden sonra geliyorsa sağ dala geçilir.
                 {
                     ptr = ptr.Right;
-                    if(ptr == null)
+                    if (ptr == null)
                     {
                         parent.Right = newNode;
                         break;
@@ -54,7 +54,7 @@ namespace MyDataStructures.Tree
                 else
                 {
                     ptr = ptr.Left;  //İlgili değer, node'da bulunan değerden önce geliyorsa sol dala geçilir.
-                    if( ptr == null)
+                    if (ptr == null)
                     {
                         parent.Left = newNode;
                         break;
@@ -90,7 +90,7 @@ namespace MyDataStructures.Tree
             var current = root;
             while (value.CompareTo(current.Value) != 0)
             {
-                if(value.CompareTo(current.Value) < 0)
+                if (value.CompareTo(current.Value) < 0)
                 {
                     current = current.Left;
                 }
@@ -98,33 +98,33 @@ namespace MyDataStructures.Tree
                 {
                     current = current.Right;
                 }
-                if(current == null)
+                if (current == null)
                 {
-                   return default(Node<T>);
+                    return default;
                 }
             }
             return current;
         }
-        public Node<T> Remove(Node<T> root,T value)
+        public Node<T> Remove(Node<T> root, T value)
         {
             if (root == null)
                 return null;
-            if(value.CompareTo(root.Value) < 0)
+            if (value.CompareTo(root.Value) < 0)
             {
                 root.Left = Remove(root.Left, value);
             }
-            else if(value.CompareTo(root.Value) > 0)
+            else if (value.CompareTo(root.Value) > 0)
             {
                 root.Right = Remove(root.Right, value);
             }
             else
             {
                 //Tek child ise
-                if(root.Left == null)
+                if (root.Left == null)
                 {
                     return root.Right;
                 }
-                else if(root.Right == null)
+                else if (root.Right == null)
                 {
                     return root.Left;
                 }
@@ -145,7 +145,7 @@ namespace MyDataStructures.Tree
         }
         public void Validate(object? obj)
         {
-            if(obj == null) throw new ArgumentNullException(nameof(obj));
+            if (obj == null) throw new ArgumentNullException(nameof(obj));
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using MyDataStructures.Tree;
+﻿using MyDataStructures.Tree.BinaryTrees;
 
 List<int> bst = new List<int>();
 bst.Add(100);

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyDataStructures.Tree.CST
+namespace MyDataStructures.Tree.Trie
 {
     public class CST : IEnumerable
     {

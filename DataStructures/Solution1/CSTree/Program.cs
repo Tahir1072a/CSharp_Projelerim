@@ -1,5 +1,5 @@
 ﻿
-using MyDataStructures.Tree.CST;
+using MyDataStructures.Tree.Trie;
 
 CST badWorths = new CST();
 badWorths.Add("Aptal");
