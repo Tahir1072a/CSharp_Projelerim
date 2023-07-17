@@ -85,7 +85,7 @@ namespace MyDataStructures.Tree.CST
             }
             return false;
         }
-        public Queue<string> toSeparate(string sentence)
+        public Queue<string> toSeparate(string sentence) //0>O(n) n : cümlede karakter sayısı
         {
             Queue<string> strings = new();
             Queue<char> chars = new();
@@ -112,16 +112,20 @@ namespace MyDataStructures.Tree.CST
             }
             return strings;
         }
-        public void Kapat(string sentence)
+        public string Censor(string sentence)
         {
-            Queue<string> seperateSentence = toSeparate(sentence);
-            while (seperateSentence.Count > 0)
+            Queue<string> seperateSentence = toSeparate(sentence); // => O(n)
+            string newSentence = "";
+            while (seperateSentence.Count > 0) // => O(m) m: Kelime sayısı
             {
-                if (Find(seperateSentence.Dequeue().ToLower()))
+                var control = seperateSentence.Dequeue().ToLower();
+                if (Find(control)) // => o(L) L = gönderilen kelimenin karakter sayısı. 50
                 {
-                    Console.WriteLine("Ayıp");
+                    control = "***"; //=> O(m) + O(n) => O(n)
                 }
+                newSentence += control + " ";
             }
+            return newSentence;
         }
     }
 }
