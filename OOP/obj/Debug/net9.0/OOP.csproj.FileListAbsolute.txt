@@ -1,0 +1,14 @@
+C:\Users\tahir\C#_Projects\OOP\bin\Debug\net9.0\OOP.exe
+C:\Users\tahir\C#_Projects\OOP\bin\Debug\net9.0\OOP.deps.json
+C:\Users\tahir\C#_Projects\OOP\bin\Debug\net9.0\OOP.runtimeconfig.json
+C:\Users\tahir\C#_Projects\OOP\bin\Debug\net9.0\OOP.dll
+C:\Users\tahir\C#_Projects\OOP\bin\Debug\net9.0\OOP.pdb
+C:\Users\tahir\C#_Projects\OOP\obj\Debug\net9.0\OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tahir\C#_Projects\OOP\obj\Debug\net9.0\OOP.AssemblyInfoInputs.cache
+C:\Users\tahir\C#_Projects\OOP\obj\Debug\net9.0\OOP.AssemblyInfo.cs
+C:\Users\tahir\C#_Projects\OOP\obj\Debug\net9.0\OOP.csproj.CoreCompileInputs.cache
+C:\Users\tahir\C#_Projects\OOP\obj\Debug\net9.0\OOP.dll
+C:\Users\tahir\C#_Projects\OOP\obj\Debug\net9.0\refint\OOP.dll
+C:\Users\tahir\C#_Projects\OOP\obj\Debug\net9.0\OOP.pdb
+C:\Users\tahir\C#_Projects\OOP\obj\Debug\net9.0\OOP.genruntimeconfig.cache
+C:\Users\tahir\C#_Projects\OOP\obj\Debug\net9.0\ref\OOP.dll
