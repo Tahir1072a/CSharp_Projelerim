@@ -16,6 +16,35 @@ Console.WriteLine($"Example2 a: {example2.a}");
 MyClass example3 = new MyClass() { a = 20, b = 90 };
 Console.WriteLine($"Example 3: {example3.a}");
 
+MyClass2 example_1 = new MyClass2();
+MyClass2 example_2 = example_1; // Shallow Copy
+
+Console.WriteLine($"Example 1: {example_1.Age}");
+Console.WriteLine($"Example 2: {example_2.Age}");
+
+example_2.Age = 20;
+
+Console.WriteLine("Değiştirilmiş property....");
+Console.WriteLine($"Example 1: {example_1.Age}");
+Console.WriteLine($"Example 2: {example_2.Age}");
+
+int number1 = 10;
+ref int number2 = ref number1; // Shallow Copy
+
+Console.WriteLine($"Number 1: {number1}\nNumber 2: {number2}");
+
+number2 = 100;
+
+Console.WriteLine($"Number 1: {number1}\nNumber 2: {number2}");
+
+
+MyClass2 object1 = new MyClass2();
+MyClass2 object2 = object1.Clone(); // Deep Copy
+
+object2.Age = 90;
+
+Console.WriteLine($"Object 1: {object1.Age}\nObject 2: {object2.Age}");
+
 public class MyClass
 {
     public int a; // Field
@@ -29,5 +58,17 @@ public class MyClass
     public void MesajGoster()
     {
         Console.WriteLine($"MyClass nesnesi: a = {a}");
+    }
+}
+
+
+
+class MyClass2
+{
+    public int Age { get; set; } = 10; // Auto Property Initializer
+
+    public MyClass2 Clone()
+    {
+        return (MyClass2)this.MemberwiseClone(); // Unboxing
     }
 }
