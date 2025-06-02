@@ -45,6 +45,28 @@ object2.Age = 90;
 
 Console.WriteLine($"Object 1: {object1.Age}\nObject 2: {object2.Age}");
 
+var orginalItems = new List<string> { "Item A", "Item B" };
+var orginalDetails = new ComplexObject.Details("orginal name");
+
+var orginalObject = new ComplexObject(10, orginalItems, orginalDetails);
+
+ComplexObject deepCopy = orginalObject.DeepCopy();
+ComplexObject deepCopyWithmemberwise = orginalObject.DeepCopyWithMemberwiseClone();
+
+Console.WriteLine($"Orignal Object More Details Value: {orginalObject.MoreDetails.Name}");
+
+deepCopy.MoreDetails.Name = "Cloned Name";
+deepCopyWithmemberwise.MoreDetails.Name = "Cloned Memberwise Name";
+
+Console.WriteLine($"Orignal Object More Details Value: {orginalObject.MoreDetails.Name}");
+Console.WriteLine($"Deep Copy Object More Details Value: {deepCopy.MoreDetails.Name}");
+Console.WriteLine($"Deep Copy Memberwise Object More Details Value: {deepCopyWithmemberwise.MoreDetails.Name}");
+
+
+var car1 = new Car() { Model = "Mercedes" }; // Burada year özelliği gelmez...
+
+Console.WriteLine($"Car 1 Model: {car1}");
+
 public class MyClass
 {
     public int a; // Field
