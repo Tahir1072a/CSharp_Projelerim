@@ -1,0 +1,15 @@
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\LinkedList_İnceleme\bin\Debug\net6.0\LinkedList_İnceleme.exe
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\LinkedList_İnceleme\bin\Debug\net6.0\LinkedList_İnceleme.deps.json
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\LinkedList_İnceleme\bin\Debug\net6.0\LinkedList_İnceleme.runtimeconfig.json
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\LinkedList_İnceleme\bin\Debug\net6.0\LinkedList_İnceleme.dll
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\LinkedList_İnceleme\bin\Debug\net6.0\LinkedList_İnceleme.pdb
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\LinkedList_İnceleme\obj\Debug\net6.0\LinkedList_İnceleme.csproj.AssemblyReference.cache
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\LinkedList_İnceleme\obj\Debug\net6.0\LinkedList_İnceleme.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\LinkedList_İnceleme\obj\Debug\net6.0\LinkedList_İnceleme.AssemblyInfoInputs.cache
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\LinkedList_İnceleme\obj\Debug\net6.0\LinkedList_İnceleme.AssemblyInfo.cs
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\LinkedList_İnceleme\obj\Debug\net6.0\LinkedList_İnceleme.csproj.CoreCompileInputs.cache
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\LinkedList_İnceleme\obj\Debug\net6.0\LinkedList_İnceleme.dll
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\LinkedList_İnceleme\obj\Debug\net6.0\refint\LinkedList_İnceleme.dll
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\LinkedList_İnceleme\obj\Debug\net6.0\LinkedList_İnceleme.pdb
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\LinkedList_İnceleme\obj\Debug\net6.0\LinkedList_İnceleme.genruntimeconfig.cache
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\LinkedList_İnceleme\obj\Debug\net6.0\ref\LinkedList_İnceleme.dll

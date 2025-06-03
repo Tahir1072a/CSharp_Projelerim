@@ -1,0 +1,12 @@
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\MyDataStructures\bin\Debug\net6.0\MyDataStructures.deps.json
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\MyDataStructures\bin\Debug\net6.0\MyDataStructures.dll
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\MyDataStructures\bin\Debug\net6.0\MyDataStructures.pdb
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\MyDataStructures\obj\Debug\net6.0\MyDataStructures.csproj.AssemblyReference.cache
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\MyDataStructures\obj\Debug\net6.0\MyDataStructures.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\MyDataStructures\obj\Debug\net6.0\MyDataStructures.AssemblyInfoInputs.cache
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\MyDataStructures\obj\Debug\net6.0\MyDataStructures.AssemblyInfo.cs
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\MyDataStructures\obj\Debug\net6.0\MyDataStructures.csproj.CoreCompileInputs.cache
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\MyDataStructures\obj\Debug\net6.0\MyDataStructures.dll
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\MyDataStructures\obj\Debug\net6.0\refint\MyDataStructures.dll
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\MyDataStructures\obj\Debug\net6.0\MyDataStructures.pdb
+C:\Users\alica\Desktop\CSharp_Projelerim\DataStructures\Solution1\MyDataStructures\obj\Debug\net6.0\ref\MyDataStructures.dll
