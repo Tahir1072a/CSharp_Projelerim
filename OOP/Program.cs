@@ -67,6 +67,9 @@ var car1 = new Car() { Model = "Mercedes" }; // Burada year özelliği gelmez...
 
 Console.WriteLine($"Car 1 Model: {car1}");
 
+var book1 = new Book() { Author = "Michael", Position = 1 };
+var book2 = book1 with { Position = 2 }; // With deiyimi ile bu şekilde kopyalama işlemi yapabiliriz.
+
 public class MyClass
 {
     public int a; // Field
@@ -82,8 +85,6 @@ public class MyClass
         Console.WriteLine($"MyClass nesnesi: a = {a}");
     }
 }
-
-
 
 class MyClass2
 {
