@@ -64,11 +64,25 @@ Console.WriteLine($"Deep Copy Memberwise Object More Details Value: {deepCopyWit
 
 
 var car1 = new Car() { Model = "Mercedes" }; // Burada year özelliği gelmez...
+var car2 = new Car() { Model = "Mercedes" };
 
-Console.WriteLine($"Car 1 Model: {car1}");
+Console.WriteLine($"Car 1 Model: {car1.Model}");
+Console.WriteLine($"Car 2 Model: {car2.Model}");
 
-var book1 = new Book() { Author = "Michael", Position = 1 };
-var book2 = book1 with { Position = 2 }; // With deiyimi ile bu şekilde kopyalama işlemi yapabiliriz.
+var book1 = new Book() { Author = "Michael", Position = 1, Age = 20 };
+var book2 = book1 with { Position = 2 }; // With deyimi ile bu şekilde kopyalama işlemi yapabiliriz.
+var book3 = new Book() { Author = "Michael", Position = 1, Age = 20 };
+
+Console.WriteLine($"Book 1 == Book 3: {book1 == book3}"); // True, Değer karşılaştırması yapar.
+Console.WriteLine($"Car 1 == Car 2: {car1 == car2}"); // False, Referans karşılaştırması yapar.
+
+Console.WriteLine($"Book 1: {book1}");
+
+var person1 = new Person("Hasan", "Basri", 23);
+var person2 = new Person("Hasan", "Uzun", 25);
+
+Console.WriteLine($"Person 1: {person1}");
+Console.WriteLine($"Person 2: {person2}"); 
 
 public class MyClass
 {

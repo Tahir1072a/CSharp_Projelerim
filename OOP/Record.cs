@@ -23,4 +23,7 @@ public record Book // => Nominal Record Yapılanması
 {
     public string? Author { get; init; }
     public int Position { get; init; }
+    public int Age { get; init; }
 }
+
+public record Person(string FirstName, string LastName, int Age); // Positional Record Yapılanması
