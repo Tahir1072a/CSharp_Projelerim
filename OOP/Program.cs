@@ -1,4 +1,5 @@
 ﻿using System;
+using OOP;
 
 MyClass example = new MyClass(); // Class Example türünde bir referans oluşturduk.
 Console.WriteLine($"Example b: {example.b}"); // Referans üzerinden ilgili nesneye ait field'lara erişiyoruz.
@@ -82,7 +83,19 @@ var person1 = new Person("Hasan", "Basri", 23);
 var person2 = new Person("Hasan", "Uzun", 25);
 
 Console.WriteLine($"Person 1: {person1}");
-Console.WriteLine($"Person 2: {person2}"); 
+Console.WriteLine($"Person 2: {person2}");
+
+
+var example22 = new CustomClassFunctions();
+var (x, y) = example22; // Nesne deconstruct metoduna sahip olduğu için içindeki değerleri dışarı kusabilir.
+Console.WriteLine($"Example 22: Name: {x}, Age: {y}");
+
+Database dbContext = Database.GetInstance;
+Database dbContext2 = Database.GetInstance;
+dbContext.Hello();
+
+dbContext.ConnectionString = "Orginal Connection String"; // Sadece bir nesne oluştuğunun kanıtı...
+Console.WriteLine($"dbContext connection string: {dbContext.ConnectionString} and dbContext2: {dbContext2.ConnectionString}");
 
 public class MyClass
 {
